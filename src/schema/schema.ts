@@ -24,7 +24,7 @@ export const commentary = pgTable('commentary', {
     eventType: text('event_type'),
     actor: text('actor'),
     team: text('team'),
-    messages: text('message').notNull(),
+    message: text('message').notNull(),
     metadata: jsonb('metadata'),
     tags: text('tags').array(),
     createdAt: timestamp('created_at').notNull().defaultNow(),

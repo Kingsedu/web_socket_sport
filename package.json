@@ -9,7 +9,7 @@
     "db:generate": "./node_modules/.bin/drizzle-kit generate",
     "db:migrate": "./node_modules/.bin/drizzle-kit migrate",
     "db:studio": "./node_modules/.bin/drizzle-kit studio",
-    "demo": "tsx src/crud-demp.ts",
+    "demo": "tsx src/crud-demo.ts",
     "dev": "nodemon --watch src --ext ts --exec \"tsx\" src/server.ts",
     "lint": "eslint 'src/**/*.ts'"
   },
