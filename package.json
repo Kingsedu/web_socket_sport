@@ -6,24 +6,34 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
+    "db:generate": "./node_modules/.bin/drizzle-kit generate",
+    "db:migrate": "./node_modules/.bin/drizzle-kit migrate",
+    "db:studio": "./node_modules/.bin/drizzle-kit studio",
+    "demo": "tsx src/crud-demo.ts",
+    "dev": "nodemon --watch src --ext ts --exec \"tsx\" src/server.ts",
     "lint": "eslint 'src/**/*.ts'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
     "dotenv": "^17.3.1",
-    "express": "^5.2.1"
+    "drizzle-orm": "^0.45.1",
+    "express": "^5.2.1",
+    "ws": "^8.19.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^25.2.3",
+    "@types/ws": "^8.18.1",
+    "drizzle-kit": "^0.31.9",
     "eslint": "^10.0.0",
     "nodemon": "^3.1.11",
     "prettier": "^3.8.1",
     "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }
