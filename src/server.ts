@@ -9,3 +9,4 @@ app.get('/health', (req, res) => {
 app.listen(configEnv.PORT, () => {
     console.log(`Server started on port: ${configEnv.PORT}`);
 })
+ 
